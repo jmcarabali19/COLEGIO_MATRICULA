@@ -112,7 +112,6 @@ namespace COLEGIO_MATRICULA
                 using (SqlConnection conn = new SqlConnection(connectionString))
                 {
                     conn.Open();
-                    //Console.WriteLine("Conexion Exitosa");
 
                     Console.WriteLine("Inserte al nuevo Estudiante: \n");
 
@@ -155,7 +154,7 @@ namespace COLEGIO_MATRICULA
             catch (Exception ex) { Console.WriteLine("error: " + ex); }
         }
         static void updatebd()
-        {
+        { // Update de la bd
             try
             {
                 string connectionString = "Server=SALSA-MM\\SALSAMSERVER;Database=COLEGIO;User id=admin;Password=admin;";
@@ -188,14 +187,14 @@ namespace COLEGIO_MATRICULA
             catch (Exception ex) { Console.WriteLine("error: " + ex); }
         }
         static void deletebd()
-        {
+        { // delete de la bd
             try
             {
                 string connectionString = "Server=SALSA-MM\\SALSAMSERVER;Database=COLEGIO;User id=admin;Password=admin;";
                 using (SqlConnection conn = new SqlConnection(connectionString))
                 {
                     conn.Open();
-                    //Console.WriteLine("Conexion Exitosa");
+                    
                     Console.WriteLine("Borrar datos del Estudiante: \n");
                     Console.WriteLine(" Ingrese Identificacion del Estudiante a Borrar:");
                     string identificacion = Console.ReadLine();
@@ -205,5 +204,4 @@ namespace COLEGIO_MATRICULA
             catch (Exception ex) { Console.WriteLine("error: " + ex); }
         }
     }
-    
 }
